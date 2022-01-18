@@ -1,10 +1,18 @@
-# PACKAGE <a href="https://docs.sykdomspulsen.no/PACKAGE"><img src="man/figures/logo.png" align="right" width="120" /></a>
+# splmaps <a href="https://docs.sykdomspulsen.no/splmaps"><img src="man/figures/logo.png" align="right" width="120" /></a>
 
 ## Overview 
 
-[PACKAGE](https://docs.sykdomspulsen.no/PACKAGE) is a system to help you organize projects. Most analyses have three (or more) main sections: code, results, and data, each with different requirements (version control/sharing/encryption). You provide folder locations and 'org' helps you take care of the details.
+[splmaps](https://docs.sykdomspulsen.no/splmaps) is developed for public health reporting purposes for different geographic levels in Norway.
 
-Read the introduction vignette [here](http://docs.sykdomspulsen.no/PACKAGE/articles/PACKAGE.html) or run `help(package="PACKAGE")`.
+Contains map data for the following geographic granularities:
+
+- County
+- Municipality
+- City ward (only for Oslo)
+
+It is convenient to visualise maps with additional information, either using text or color palettes.
+
+Read the introduction vignette [here](http://docs.sykdomspulsen.no/splmaps/articles/splmaps.html) or run `help(package="splmaps")`.
 
 ## splverse
 
@@ -30,6 +38,6 @@ Save the file and restart R.
 You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages from the FHI registry.
 
 ```
-install.packages("PACKAGE")
+install.packages("splmaps")
 ```
 

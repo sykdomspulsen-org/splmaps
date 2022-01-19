@@ -12,13 +12,13 @@ URL: https://docs.sykdomspulsen.no/splmaps, https://github.com/sykdomspulsen-org
 BugReports: https://github.com/sykdomspulsen-org/splmaps/issues
 Encoding: UTF-8
 LazyData: true
-Imports: data.table,
-    magrittr,
-    ggplot2
+Imports: data.table
 Suggests: testthat,
     knitr,
     rmarkdown,
     rstudioapi,
-    glue
+    glue,
+    magrittr,
+    ggplot2
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr

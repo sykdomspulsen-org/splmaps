@@ -2,13 +2,13 @@
 # map default ----
 
 ## data.table ----
-#' Map of Norwegian municipalities in data.table format
+#' Maps of Norwegian municipalities in data.table format
 #'
 #' We conveniently package map datasets for Norwegian municipalities
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
 #' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
-#' Borders for 2019 and 2020 are provided.
+#' Borders for 2020 and 2019 are provided.
 #'
 #' @format
 #' \describe{
@@ -21,7 +21,6 @@
 #' @source \url{https://kartkatalog.geonorge.no/metadata/norske-fylker-og-kommuner-illustrasjonsdata-2020-(klippet-etter-kyst)/7408853f-eb7d-48dd-bb6c-80c7e80f7392}
 #' @source \url{https://kartkatalog.geonorge.no/metadata/uuid/cb02ab77-d3e6-4500-8a92-ea67367e7734}
 #' @examples
-#'
 #' # 2020 borders
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
@@ -66,7 +65,7 @@
 #'
 #' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
-#' Borders for 2019 and 2020 are provided.
+#' Borders for 2020 and 2019 are provided.
 #'
 #' @format
 #' \describe{
@@ -90,7 +89,7 @@
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
 #' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'
-#' Borders for 2019 and 2020 are provided.
+#' Borders for 2020 and 2019 are provided.
 #'
 #' @format
 #' \describe{
@@ -103,7 +102,6 @@
 #' @source \url{https://kartkatalog.geonorge.no/metadata/norske-fylker-og-kommuner-illustrasjonsdata-2020-(klippet-etter-kyst)/7408853f-eb7d-48dd-bb6c-80c7e80f7392}
 #' @source \url{https://kartkatalog.geonorge.no/metadata/uuid/cb02ab77-d3e6-4500-8a92-ea67367e7734}
 #' @examples
-#'
 #' # 2020 borders
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))

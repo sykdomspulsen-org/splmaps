@@ -9,7 +9,7 @@
 \alias{norway_nuts3_position_geolabels_b2020_default_dt}
 \alias{norway_nuts3_position_geolabels_b2019_default_dt}
 \alias{norway_nuts3_position_geolabels_b2017_default_dt}
-\title{Map of Norwegian counties in data.table format}
+\title{Maps of Norwegian counties in data.table format}
 \format{
 \describe{
 \item{long}{Location code.}
@@ -56,7 +56,6 @@ libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 Borders for 2020, 2019, and 2017 are provided.
 }
 \examples{
-
 # 2020 borders
 library(ggplot2)
 q <- ggplot(mapping = aes(x = long, y = lat))

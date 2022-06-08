@@ -2,7 +2,7 @@
 # map default ----
 
 ## data.table ----
-#' Map of Norwegian counties in data.table format
+#' Maps of Norwegian counties in data.table format
 #'
 #' We conveniently package map datasets for Norwegian counties
 #' (taken from Geonorge) that can be used in ggplot2 without needing any geo
@@ -21,7 +21,6 @@
 #' @source \url{https://kartkatalog.geonorge.no/metadata/norske-fylker-og-kommuner-illustrasjonsdata-2020-(klippet-etter-kyst)/7408853f-eb7d-48dd-bb6c-80c7e80f7392}
 #' @source \url{https://kartkatalog.geonorge.no/metadata/uuid/cb02ab77-d3e6-4500-8a92-ea67367e7734}
 #' @examples
-#'
 #' # 2020 borders
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
@@ -126,7 +125,6 @@
 #' @source \url{https://kartkatalog.geonorge.no/metadata/norske-fylker-og-kommuner-illustrasjonsdata-2020-(klippet-etter-kyst)/7408853f-eb7d-48dd-bb6c-80c7e80f7392}
 #' @source \url{https://kartkatalog.geonorge.no/metadata/uuid/cb02ab77-d3e6-4500-8a92-ea67367e7734}
 #' @examples
-#'
 #' # 2020 borders
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))

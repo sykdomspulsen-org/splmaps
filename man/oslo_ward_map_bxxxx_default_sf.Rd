@@ -4,7 +4,7 @@
 \name{oslo_ward_map_bxxxx_default_sf}
 \alias{oslo_ward_map_bxxxx_default_sf}
 \alias{oslo_ward_map_b2020_default_sf}
-\title{Maps of Oslo wards (bydeler) in sf format}
+\title{Map of Oslo wards (bydeler) in sf format}
 \format{
 \describe{
 \item{geometry}{Multipolygon}

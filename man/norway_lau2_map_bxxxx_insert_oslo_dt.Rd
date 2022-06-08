@@ -43,10 +43,9 @@ We conveniently package map datasets for Norwegian municipalities
 libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 }
 \details{
-Borders for 2019 and 2020 are provided.
+Borders for 2020 and 2019 are provided.
 }
 \examples{
-
 # 2020 borders
 library(ggplot2)
 q <- ggplot(mapping = aes(x = long, y = lat))

@@ -1,6 +1,6 @@
 ## data.table ----
 
-#' Maps of Oslo wards (bydeler) in data.table format
+#' Map of Oslo wards (bydeler) in data.table format
 #'
 #' We conveniently package map datasets for Oslo wards (bydeler)
 #' (taken from Oslo municipality) that can be used in ggplot2 without needing any geo
@@ -42,7 +42,7 @@
 
 ## sf format ----
 
-#' Maps of Oslo wards (bydeler) in sf format
+#' Map of Oslo wards (bydeler) in sf format
 #'
 #' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 #'

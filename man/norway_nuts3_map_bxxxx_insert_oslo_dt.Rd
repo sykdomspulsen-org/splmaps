@@ -72,7 +72,6 @@ libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 Borders for 2020, 2019, and 2017 are provided.
 }
 \examples{
-
 # 2020 borders
 library(ggplot2)
 q <- ggplot(mapping = aes(x = long, y = lat))

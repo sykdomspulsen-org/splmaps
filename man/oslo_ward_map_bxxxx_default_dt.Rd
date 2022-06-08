@@ -5,7 +5,7 @@
 \alias{oslo_ward_map_bxxxx_default_dt}
 \alias{oslo_ward_map_b2020_default_dt}
 \alias{oslo_ward_position_geolabels_b2020_default_dt}
-\title{Maps of Oslo wards (bydeler) in data.table format}
+\title{Map of Oslo wards (bydeler) in data.table format}
 \format{
 \describe{
 \item{long}{Location code.}

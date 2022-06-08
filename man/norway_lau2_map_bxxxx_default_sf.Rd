@@ -28,6 +28,6 @@ norway_lau2_map_b2019_default_sf
 This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
 }
 \details{
-Borders for 2019 and 2020 are provided.
+Borders for 2020 and 2019 are provided.
 }
 \keyword{datasets}

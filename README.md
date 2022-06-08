@@ -1,9 +1,9 @@
-# splmaps <a href="https://docs.sykdomspulsen.no/splmaps"><img src="man/figures/logo.png" align="right" width="120" /></a>
+# splmaps <a href="https://docs.sykdomspulsen.no/splmaps/"><img src="man/figures/logo.png" align="right" width="120" /></a>
 
 
 ## Overview 
 
-[splmaps](https://docs.sykdomspulsen.no/splmaps) helps create preformatted maps of Norway that generally do not need geolibraries.It helps public health reporting purposes for different geographic levels in Norway.
+[splmaps](https://docs.sykdomspulsen.no/splmaps/) helps create preformatted maps of Norway that generally do not need geolibraries.It helps public health reporting purposes for different geographic levels in Norway.
 
 The following geographic granularities are included: 
 
@@ -15,7 +15,7 @@ The following geographic granularities are included:
 
 It is convenient to visualize maps with additional information, either using text labels or color palettes.
 
-Read the introduction vignette [here](http://docs.sykdomspulsen.no/splmaps/articles/splmaps.html) or run `help(package="splmaps")`.
+Read the introduction vignette [here](https://docs.sykdomspulsen.no/splmaps/articles/splmaps.html) or run `help(package="splmaps")`.
 
 
 ## splverse
@@ -39,7 +39,7 @@ options(
 
 Save the file and restart R.
 
-You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages from our [drat repository](https://docs.sykdomspulsen.no/drat).
+You can now install [splverse](https://docs.sykdomspulsen.no/packages) packages from our [drat repository](https://docs.sykdomspulsen.no/drat/).
 
 ```
 install.packages("splmaps")

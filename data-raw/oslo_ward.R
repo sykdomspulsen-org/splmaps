@@ -1,54 +1,4 @@
-#' Maps of Oslo bydels (wards) (2020 borders)
-#'
-#' We conveniently package map datasets for Oslo bydels (wards)
-#' (taken from Oslo municipality) that can be used in ggplot2 without needing any geo
-#' libraries. This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
-#'
-#' @format
-#' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
-#' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (ward code).}
-#' }
-#' @examples
-#' library(ggplot2)
-#' q <- ggplot(mapping = aes(x = long, y = lat))
-#' q <- q + geom_polygon(
-#'   data = splmaps::oslo_ward_map_b2020_default_dt,
-#'   mapping = aes(group = group, fill = location_code),
-#'   color = "black",
-#'   fill = "white",
-#'   size = 0.2
-#' )
-#' q <- q + geom_label(
-#'   data = splmaps::oslo_ward_position_geolabels_b2020_default_dt,
-#'   mapping = aes(label = location_code),
-#'   color = "red"
-#' )
-#' q <- q + theme_void()
-#' q <- q + coord_quickmap()
-#' q
-#' @name oslo_ward_map_b2020_default_dt
-"oslo_ward_map_b2020_default_dt"
-
-#' @rdname oslo_ward_map_b2020_default_dt
-"oslo_ward_position_geolabels_b2020_default_dt"
-
-#' Maps of Oslo bydels (wards) (2020 borders) in sf format
-#'
-#' This data is licensed under Creative Commons BY 4.0 (CC BY 4.0).
-#'
-#' @format
-#' \describe{
-#' \item{long}{Location code.}
-#' \item{lat}{Location name.}
-#' \item{order}{The order that this line should be plotted in.}
-#' \item{group}{Needs to be used as 'group' aesthetic in ggplot2.}
-#' \item{location_code}{Location code (ward code).}
-#' }
-"oslo_ward_map_b2020_default_sf"
+library(data.table)
 
 gen_oslo_ward_map <- function(return_sf=FALSE) {
 
@@ -63,7 +13,7 @@ gen_oslo_ward_map <- function(return_sf=FALSE) {
 
 
   d <- sf::read_sf(
-    system.file("rawdata", "Bydel_Oslo", "Bydeler.shp", package = "splmaps")
+    fs::path("data-raw", "files", "Bydel_Oslo", "Bydeler.shp")
   )
 
   # drop Z dimension, make into sp
@@ -204,5 +154,20 @@ gen_oslo_ward_position_geolabels <- function(x_year_end) {
   return(label_positions)
 }
 
+# ***************************** #
+# map default ----
+
+## 2020 ----
+oslo_ward_map_b2020_default_dt <- gen_oslo_ward_map()
+usethis::use_data(oslo_ward_map_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+oslo_ward_map_b2020_default_sf <- gen_oslo_ward_map(return_sf = T)
+usethis::use_data(oslo_ward_map_b2020_default_sf, overwrite = TRUE, version = 3, compress = "xz")
+
+# ***************************** #
+# labels default ----
+
+## 2020 ----
+oslo_ward_position_geolabels_b2020_default_dt <- gen_oslo_ward_position_geolabels(x_year_end = 2020)
+usethis::use_data(oslo_ward_position_geolabels_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 

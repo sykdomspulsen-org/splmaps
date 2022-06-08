@@ -4,3 +4,4 @@ Makefile
 _pkgdown.yml
 cran-commends.md
 license.md
+^data-raw$

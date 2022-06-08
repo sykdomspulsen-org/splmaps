@@ -11,6 +11,6 @@
     "splmaps ",
     version,
     "\n",
-    "https://docs.sykdomspulsen.no/splmaps"
+    "https://docs.sykdomspulsen.no/splmaps/"
   ))
 }

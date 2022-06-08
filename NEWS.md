@@ -1,4 +1,8 @@
-# splmaps 2020.6.6
+# splmaps 2022.6.8
+
+- Refactored the .rd files.
+
+# splmaps 2022.6.6
 
 - Migrated content from fhimaps to splmaps
 

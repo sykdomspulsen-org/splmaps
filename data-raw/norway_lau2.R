@@ -3,7 +3,7 @@ library(data.table)
 # broom
 # rmapshaper
 # sp
-gen_norway_lau2_map <- function(
+gen_nor_lau2_map <- function(
     x_year_end,
     insert = FALSE,
     split = FALSE,
@@ -120,67 +120,67 @@ gen_norway_lau2_map <- function(
 # map default ----
 
 ## 2020 ----
-norway_lau2_map_b2020_default_dt <-  gen_norway_lau2_map(x_year_end=2020)
-usethis::use_data(norway_lau2_map_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
-norway_lau2_map_b2020_default_sf <-  gen_norway_lau2_map(x_year_end=2020, return_sf = T)
-usethis::use_data(norway_lau2_map_b2020_default_sf, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2020_default_dt <-  gen_nor_lau2_map(x_year_end=2020)
+usethis::use_data(nor_lau2_map_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2020_default_sf <-  gen_nor_lau2_map(x_year_end=2020, return_sf = T)
+usethis::use_data(nor_lau2_map_b2020_default_sf, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_lau2_map_b2019_default_dt <-  gen_norway_lau2_map(x_year_end=2019)
-usethis::use_data(norway_lau2_map_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
-norway_lau2_map_b2019_default_sf <-  gen_norway_lau2_map(x_year_end=2019, return_sf = T)
-usethis::use_data(norway_lau2_map_b2019_default_sf, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2019_default_dt <-  gen_nor_lau2_map(x_year_end=2019)
+usethis::use_data(nor_lau2_map_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2019_default_sf <-  gen_nor_lau2_map(x_year_end=2019, return_sf = T)
+usethis::use_data(nor_lau2_map_b2019_default_sf, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # map insert oslo ----
 
 ## 2020 ----
-norway_lau2_map_b2020_insert_oslo_dt <- gen_norway_lau2_map(x_year_end=2020, insert = T)
-usethis::use_data(norway_lau2_map_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2020_insert_oslo_dt <- gen_nor_lau2_map(x_year_end=2020, insert = T)
+usethis::use_data(nor_lau2_map_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_lau2_map_b2019_insert_oslo_dt <- gen_norway_lau2_map(x_year_end=2019, insert = T)
-usethis::use_data(norway_lau2_map_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2019_insert_oslo_dt <- gen_nor_lau2_map(x_year_end=2019, insert = T)
+usethis::use_data(nor_lau2_map_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # map split ----
 
 ## 2020 ----
-norway_lau2_map_b2020_split_dt <-  gen_norway_lau2_map(x_year_end=2020, split=T)
-usethis::use_data(norway_lau2_map_b2020_split_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_lau2_map_b2020_split_dt <-  gen_nor_lau2_map(x_year_end=2020, split=T)
+usethis::use_data(nor_lau2_map_b2020_split_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # labels default ----
 
 ## 2020 ----
-norway_lau2_position_geolabels_b2020_default_dt <- norway_lau2_map_b2020_default_dt[,.(
+nor_lau2_position_geolabels_b2020_default_dt <- nor_lau2_map_b2020_default_dt[,.(
   long = mean(long),
   lat = mean(lat)
 ), keyby = .(location_code)]
-usethis::use_data(norway_lau2_position_geolabels_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+usethis::use_data(nor_lau2_position_geolabels_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_lau2_position_geolabels_b2019_default_dt <- norway_lau2_map_b2019_default_dt[,.(
+nor_lau2_position_geolabels_b2019_default_dt <- nor_lau2_map_b2019_default_dt[,.(
   long = mean(long),
   lat = mean(lat)
 ), keyby = .(location_code)]
-usethis::use_data(norway_lau2_position_geolabels_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+usethis::use_data(nor_lau2_position_geolabels_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # labels insert oslo ----
 
 ## 2020 ----
-norway_lau2_position_geolabels_b2020_insert_oslo_dt <- norway_lau2_map_b2020_insert_oslo_dt[,.(
+nor_lau2_position_geolabels_b2020_insert_oslo_dt <- nor_lau2_map_b2020_insert_oslo_dt[,.(
   long = mean(long),
   lat = mean(lat)
 ), keyby = .(location_code)]
-usethis::use_data(norway_lau2_position_geolabels_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+usethis::use_data(nor_lau2_position_geolabels_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_lau2_position_geolabels_b2019_insert_oslo_dt <- norway_lau2_map_b2019_insert_oslo_dt[,.(
+nor_lau2_position_geolabels_b2019_insert_oslo_dt <- nor_lau2_map_b2019_insert_oslo_dt[,.(
   long = mean(long),
   lat = mean(lat)
 ), keyby = .(location_code)]
-usethis::use_data(norway_lau2_position_geolabels_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+usethis::use_data(nor_lau2_position_geolabels_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 

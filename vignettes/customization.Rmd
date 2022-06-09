@@ -36,7 +36,7 @@ The maps can be easily customized with color and labels.
 ### Automatic coloring by `location_code`
 
 ```{r fig.height=6, fig.width=6}
-pd <- copy(splmaps::norway_nuts3_map_b2020_insert_oslo_dt)
+pd <- copy(splmaps::nor_nuts3_map_b2020_insert_oslo_dt)
 
 q <- ggplot()
 q <- q + geom_polygon(
@@ -52,8 +52,8 @@ q <- q + geom_polygon(
 )
 q <- q + annotate(
   "text",
-  x = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
-  y = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
+  x = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
+  y = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
   label = "Oslo"
 )
 q <- q + theme_void()
@@ -70,7 +70,7 @@ q
 It is also possible to specify the color by user-defined groups. Here we show an example of assigning different (pseudo) risk level to each county. 
 
 ```{r fig.height=6, fig.width=6, warning=FALSE}
-pd <- copy(splmaps::norway_nuts3_map_b2020_insert_oslo_dt)
+pd <- copy(splmaps::nor_nuts3_map_b2020_insert_oslo_dt)
 
 # assign each location a random category for different colors
 location_info <- unique(pd[,c("location_code")])
@@ -102,8 +102,8 @@ q <- q + geom_polygon(
 )
 q <- q + annotate(
   "text",
-  x = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
-  y = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
+  x = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
+  y = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
   label = "Oslo"
 )
 q <- q + coord_quickmap()
@@ -123,7 +123,7 @@ q
 We can add labels of county index onto the maps. There are several options for adding texts on a graph in `ggplot2`. We recommend `geom_label()` to add the labels if no label overlap occurs, otherwise we recommend using `ggrepel::geom_label_repel()`. 
 
 ```{r fig.height=6, fig.width=6}
-pd <- copy(splmaps::norway_nuts3_map_b2020_insert_oslo_dt)
+pd <- copy(splmaps::nor_nuts3_map_b2020_insert_oslo_dt)
 q <- ggplot()
 q <- q + geom_polygon(
   data = pd, 
@@ -138,12 +138,12 @@ q <- q + geom_polygon(
 )
 q <- q + annotate(
   "text",
-  x = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
-  y = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
+  x = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
+  y = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
   label = "Oslo"
 )
 q <- q + geom_label(
-  data = splmaps::norway_nuts3_position_geolabels_b2020_default_dt,
+  data = splmaps::nor_nuts3_position_geolabels_b2020_default_dt,
   mapping = aes(x = long, y = lat, label = location_code)
   )
 # ggrepel::geom_label_repel() for avoiding overlap
@@ -189,21 +189,21 @@ It is convenient to use `spldata` package to enrich Norway and Oslo maps with ex
 
 ```{r fig.height=6, fig.width=6}
 # enrich with population and location name
-dpop_2020 <- fhidata::norway_population_b2020[
+dpop_2020 <- fhidata::nor_population_b2020[
   year == '2020',
   .(pop_total = sum(pop)),
   keyby = location_code
 ]
 
 # join, create label
-labels <- copy(splmaps::norway_nuts3_position_geolabels_b2020_insert_oslo_dt)
+labels <- copy(splmaps::nor_nuts3_position_geolabels_b2020_insert_oslo_dt)
 labels[
   dpop_2020, 
   on = "location_code",
   pop_total := pop_total
 ]
 labels[
-  fhidata::norway_locations_long_b2020, 
+  fhidata::nor_locations_long_b2020, 
   on = "location_code",
   location_name := location_name
 ]
@@ -211,7 +211,7 @@ labels[, label := paste0(location_name, '\n', pop_total)]
 print(head(labels))
 
 # plot
-pd <- copy(splmaps::norway_nuts3_map_b2020_insert_oslo_dt)
+pd <- copy(splmaps::nor_nuts3_map_b2020_insert_oslo_dt)
 q <- ggplot()
 q <- q + geom_polygon(
   data = pd, 
@@ -226,8 +226,8 @@ q <- q + geom_polygon(
 )
 q <- q + annotate(
   "text",
-  x = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
-  y = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
+  x = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
+  y = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
   label = "Oslo"
 )
 q <- q + ggrepel::geom_label_repel(
@@ -247,7 +247,7 @@ q
 
 ```{r fig.height=6, fig.width=6}
 # enrich with population and location name
-dpop_2020 <- fhidata::norway_population_b2020[
+dpop_2020 <- fhidata::nor_population_b2020[
   year == '2020',
   .(pop_total = sum(pop)),
   keyby = location_code
@@ -261,7 +261,7 @@ labels[
   pop_total := pop_total
 ]
 labels[
-  fhidata::norway_locations_long_b2020, 
+  fhidata::nor_locations_long_b2020, 
   on = "location_code",
   location_name := location_name
 ]

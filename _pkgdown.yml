@@ -27,12 +27,12 @@ authors:
 reference:
 - title: Norwegian Counties (NUTS3)
   contents:
-  - starts_with("norway_nuts3")
-  - starts_with("norway_xxx")
+  - starts_with("nor_nuts3")
+  - starts_with("nor_xxx")
 
 - title: Norwegian Municipalities (LAU2)
   contents:
-  - starts_with("norway_lau2")
+  - starts_with("nor_lau2")
 
 - title: Oslo Wards (bydeler)
   contents:

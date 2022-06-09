@@ -35,7 +35,7 @@ A map with the default layout can be made in this way. For more advanced *layout
 
 
 ```{r fig.height=6, fig.width=6}
-pd <- copy(splmaps::norway_lau2_map_b2020_default_dt)
+pd <- copy(splmaps::nor_lau2_map_b2020_default_dt)
 q <- ggplot()
 q <- q + geom_polygon(data = pd, aes( x = long, y = lat, group = group), 
                       color="black", fill="white", size=0.1)

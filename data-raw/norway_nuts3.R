@@ -1,6 +1,6 @@
 library(data.table)
 
-gen_norway_nuts3_position_geolabels <- function(x_year_end, insert = F) {
+gen_nor_nuts3_position_geolabels <- function(x_year_end, insert = F) {
   location_code <- NULL
   long <- NULL
   lat <- NULL
@@ -120,7 +120,7 @@ gen_norway_nuts3_position_geolabels <- function(x_year_end, insert = F) {
 
 # insert for oslo/akershus?
 # split the country in 2?
-gen_norway_nuts3_map <- function(x_year_end, insert = FALSE, split = FALSE, return_sf=FALSE) {
+gen_nor_nuts3_map <- function(x_year_end, insert = FALSE, split = FALSE, return_sf=FALSE) {
   stopifnot(x_year_end %in% c("2017", "2019", "2020"))
 
   . <- NULL
@@ -226,74 +226,74 @@ gen_norway_nuts3_map <- function(x_year_end, insert = FALSE, split = FALSE, retu
 # map default ----
 
 ## 2020 ----
-norway_nuts3_map_b2020_default_dt <- gen_norway_nuts3_map(x_year_end=2020)
-usethis::use_data(norway_nuts3_map_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
-norway_nuts3_map_b2020_default_sf <- gen_norway_nuts3_map(x_year_end=2020, return_sf = T)
-usethis::use_data(norway_nuts3_map_b2020_default_sf, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2020_default_dt <- gen_nor_nuts3_map(x_year_end=2020)
+usethis::use_data(nor_nuts3_map_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2020_default_sf <- gen_nor_nuts3_map(x_year_end=2020, return_sf = T)
+usethis::use_data(nor_nuts3_map_b2020_default_sf, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_nuts3_map_b2019_default_dt <- gen_norway_nuts3_map(x_year_end=2019)
-usethis::use_data(norway_nuts3_map_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
-norway_nuts3_map_b2019_default_sf <- gen_norway_nuts3_map(x_year_end=2019, return_sf = TRUE)
-usethis::use_data(norway_nuts3_map_b2019_default_sf, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2019_default_dt <- gen_nor_nuts3_map(x_year_end=2019)
+usethis::use_data(nor_nuts3_map_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2019_default_sf <- gen_nor_nuts3_map(x_year_end=2019, return_sf = TRUE)
+usethis::use_data(nor_nuts3_map_b2019_default_sf, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2017 ----
-norway_nuts3_map_b2017_default_dt <- gen_norway_nuts3_map(x_year_end=2017)
-usethis::use_data(norway_nuts3_map_b2017_default_dt, overwrite = TRUE, version = 3, compress = "xz")
-norway_nuts3_map_b2017_default_sf <- gen_norway_nuts3_map(x_year_end=2017, return_sf = T)
-usethis::use_data(norway_nuts3_map_b2017_default_sf, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2017_default_dt <- gen_nor_nuts3_map(x_year_end=2017)
+usethis::use_data(nor_nuts3_map_b2017_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2017_default_sf <- gen_nor_nuts3_map(x_year_end=2017, return_sf = T)
+usethis::use_data(nor_nuts3_map_b2017_default_sf, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # map insert oslo ----
 
 ## 2020 ----
-norway_nuts3_map_b2020_insert_oslo_dt <- gen_norway_nuts3_map(x_year_end=2020, insert = T)
-usethis::use_data(norway_nuts3_map_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2020_insert_oslo_dt <- gen_nor_nuts3_map(x_year_end=2020, insert = T)
+usethis::use_data(nor_nuts3_map_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_nuts3_map_b2019_insert_oslo_dt <- gen_norway_nuts3_map(x_year_end=2019, insert = T)
-usethis::use_data(norway_nuts3_map_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2019_insert_oslo_dt <- gen_nor_nuts3_map(x_year_end=2019, insert = T)
+usethis::use_data(nor_nuts3_map_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2017 ----
-norway_nuts3_map_b2017_insert_oslo_dt <- gen_norway_nuts3_map(x_year_end=2017, insert = T)
-usethis::use_data(norway_nuts3_map_b2017_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2017_insert_oslo_dt <- gen_nor_nuts3_map(x_year_end=2017, insert = T)
+usethis::use_data(nor_nuts3_map_b2017_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # map split ----
 
 ## 2020 ----
-norway_nuts3_map_b2020_split_dt <- gen_norway_nuts3_map(x_year_end=2020, split=T)
-usethis::use_data(norway_nuts3_map_b2020_split_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_map_b2020_split_dt <- gen_nor_nuts3_map(x_year_end=2020, split=T)
+usethis::use_data(nor_nuts3_map_b2020_split_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # labels default ----
 
 ## 2020 ----
-norway_nuts3_position_geolabels_b2020_default_dt <- gen_norway_nuts3_position_geolabels(x_year_end = 2020)
-usethis::use_data(norway_nuts3_position_geolabels_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_position_geolabels_b2020_default_dt <- gen_nor_nuts3_position_geolabels(x_year_end = 2020)
+usethis::use_data(nor_nuts3_position_geolabels_b2020_default_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_nuts3_position_geolabels_b2019_default_dt <- gen_norway_nuts3_position_geolabels(x_year_end = 2019)
-usethis::use_data(norway_nuts3_position_geolabels_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_position_geolabels_b2019_default_dt <- gen_nor_nuts3_position_geolabels(x_year_end = 2019)
+usethis::use_data(nor_nuts3_position_geolabels_b2019_default_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2017 ----
-norway_nuts3_position_geolabels_b2017_default_dt <- gen_norway_nuts3_position_geolabels(x_year_end = 2017)
-usethis::use_data(norway_nuts3_position_geolabels_b2017_default_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_position_geolabels_b2017_default_dt <- gen_nor_nuts3_position_geolabels(x_year_end = 2017)
+usethis::use_data(nor_nuts3_position_geolabels_b2017_default_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 # ***************************** #
 # labels insert oslo ----
 
 ## 2020 ----
-norway_nuts3_position_geolabels_b2020_insert_oslo_dt <- gen_norway_nuts3_position_geolabels(x_year_end = 2020, insert = T)
-usethis::use_data(norway_nuts3_position_geolabels_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_position_geolabels_b2020_insert_oslo_dt <- gen_nor_nuts3_position_geolabels(x_year_end = 2020, insert = T)
+usethis::use_data(nor_nuts3_position_geolabels_b2020_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2019 ----
-norway_nuts3_position_geolabels_b2019_insert_oslo_dt <- gen_norway_nuts3_position_geolabels(x_year_end = 2019, insert = T)
-usethis::use_data(norway_nuts3_position_geolabels_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_position_geolabels_b2019_insert_oslo_dt <- gen_nor_nuts3_position_geolabels(x_year_end = 2019, insert = T)
+usethis::use_data(nor_nuts3_position_geolabels_b2019_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 ## 2017 ----
-norway_nuts3_position_geolabels_b2017_insert_oslo_dt <- gen_norway_nuts3_position_geolabels(x_year_end = 2017, insert = T)
-usethis::use_data(norway_nuts3_position_geolabels_b2017_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
+nor_nuts3_position_geolabels_b2017_insert_oslo_dt <- gen_nor_nuts3_position_geolabels(x_year_end = 2017, insert = T)
+usethis::use_data(nor_nuts3_position_geolabels_b2017_insert_oslo_dt, overwrite = TRUE, version = 3, compress = "xz")
 
 
 

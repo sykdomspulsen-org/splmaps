@@ -25,7 +25,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2020_default_dt,
+#'   data = splmaps::nor_nuts3_map_b2020_default_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -39,7 +39,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2019_default_dt,
+#'   data = splmaps::nor_nuts3_map_b2019_default_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -53,7 +53,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2017_default_dt,
+#'   data = splmaps::nor_nuts3_map_b2017_default_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -62,23 +62,23 @@
 #' q <- q + theme_void()
 #' q <- q + coord_quickmap()
 #' q
-#' @name norway_nuts3_map_bxxxx_default_dt
-"norway_nuts3_map_b2020_default_dt"
+#' @name nor_nuts3_map_bxxxx_default_dt
+"nor_nuts3_map_b2020_default_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_default_dt
-"norway_nuts3_map_b2019_default_dt"
+#' @rdname nor_nuts3_map_bxxxx_default_dt
+"nor_nuts3_map_b2019_default_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_default_dt
-"norway_nuts3_map_b2017_default_dt"
+#' @rdname nor_nuts3_map_bxxxx_default_dt
+"nor_nuts3_map_b2017_default_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_default_dt
-"norway_nuts3_position_geolabels_b2020_default_dt"
+#' @rdname nor_nuts3_map_bxxxx_default_dt
+"nor_nuts3_position_geolabels_b2020_default_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_default_dt
-"norway_nuts3_position_geolabels_b2019_default_dt"
+#' @rdname nor_nuts3_map_bxxxx_default_dt
+"nor_nuts3_position_geolabels_b2019_default_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_default_dt
-"norway_nuts3_position_geolabels_b2017_default_dt"
+#' @rdname nor_nuts3_map_bxxxx_default_dt
+"nor_nuts3_position_geolabels_b2017_default_dt"
 
 ## sf format ----
 #' Maps of Norwegian municipalities in sf format
@@ -94,14 +94,14 @@
 #' }
 #' @source \url{https://kartkatalog.geonorge.no/metadata/norske-fylker-og-kommuner-illustrasjonsdata-2020-(klippet-etter-kyst)/7408853f-eb7d-48dd-bb6c-80c7e80f7392}
 #' @source \url{https://kartkatalog.geonorge.no/metadata/uuid/cb02ab77-d3e6-4500-8a92-ea67367e7734}
-#' @name norway_nuts3_map_bxxxx_default_sf
-"norway_nuts3_map_b2020_default_sf"
+#' @name nor_nuts3_map_bxxxx_default_sf
+"nor_nuts3_map_b2020_default_sf"
 
-#' @name norway_nuts3_map_bxxxx_default_sf
-"norway_nuts3_map_b2019_default_sf"
+#' @name nor_nuts3_map_bxxxx_default_sf
+"nor_nuts3_map_b2019_default_sf"
 
-#' @name norway_nuts3_map_bxxxx_default_sf
-"norway_nuts3_map_b2017_default_sf"
+#' @name nor_nuts3_map_bxxxx_default_sf
+"nor_nuts3_map_b2017_default_sf"
 
 # ***************************** #
 # map insert oslo ----
@@ -129,7 +129,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2020_insert_oslo_dt,
+#'   data = splmaps::nor_nuts3_map_b2020_insert_oslo_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -137,8 +137,8 @@
 #' )
 #' q <- q + annotate(
 #'   "text",
-#'   x = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
-#'   y = splmaps::norway_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
+#'   x = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$long,
+#'   y = splmaps::nor_xxx_position_title_insert_oslo_b2020_insert_oslo_dt$lat,
 #'   label = "Oslo"
 #' )
 #' q <- q + theme_void()
@@ -149,7 +149,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2019_insert_oslo_dt,
+#'   data = splmaps::nor_nuts3_map_b2019_insert_oslo_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -157,8 +157,8 @@
 #' )
 #' q <- q + annotate(
 #'   "text",
-#'   x = splmaps::norway_xxx_position_title_insert_oslo_b2019_insert_oslo_dt$long,
-#'   y = splmaps::norway_xxx_position_title_insert_oslo_b2019_insert_oslo_dt$lat,
+#'   x = splmaps::nor_xxx_position_title_insert_oslo_b2019_insert_oslo_dt$long,
+#'   y = splmaps::nor_xxx_position_title_insert_oslo_b2019_insert_oslo_dt$lat,
 #'   label = "Oslo"
 #' )
 #' q <- q + theme_void()
@@ -169,7 +169,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2017_insert_oslo_dt,
+#'   data = splmaps::nor_nuts3_map_b2017_insert_oslo_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -177,30 +177,30 @@
 #' )
 #' q <- q + annotate(
 #'   "text",
-#'   x = splmaps::norway_xxx_position_title_insert_oslo_b2017_insert_oslo_dt$long,
-#'   y = splmaps::norway_xxx_position_title_insert_oslo_b2017_insert_oslo_dt$lat,
+#'   x = splmaps::nor_xxx_position_title_insert_oslo_b2017_insert_oslo_dt$long,
+#'   y = splmaps::nor_xxx_position_title_insert_oslo_b2017_insert_oslo_dt$lat,
 #'   label = "Oslo"
 #' )
 #' q <- q + theme_void()
 #' q <- q + coord_quickmap()
 #' q
-#' @name norway_nuts3_map_bxxxx_insert_oslo_dt
-"norway_nuts3_map_b2020_insert_oslo_dt"
+#' @name nor_nuts3_map_bxxxx_insert_oslo_dt
+"nor_nuts3_map_b2020_insert_oslo_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_insert_oslo_dt
-"norway_nuts3_map_b2019_insert_oslo_dt"
+#' @rdname nor_nuts3_map_bxxxx_insert_oslo_dt
+"nor_nuts3_map_b2019_insert_oslo_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_insert_oslo_dt
-"norway_nuts3_map_b2017_insert_oslo_dt"
+#' @rdname nor_nuts3_map_bxxxx_insert_oslo_dt
+"nor_nuts3_map_b2017_insert_oslo_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_insert_oslo_dt
-"norway_nuts3_position_geolabels_b2020_insert_oslo_dt"
+#' @rdname nor_nuts3_map_bxxxx_insert_oslo_dt
+"nor_nuts3_position_geolabels_b2020_insert_oslo_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_insert_oslo_dt
-"norway_nuts3_position_geolabels_b2019_insert_oslo_dt"
+#' @rdname nor_nuts3_map_bxxxx_insert_oslo_dt
+"nor_nuts3_position_geolabels_b2019_insert_oslo_dt"
 
-#' @rdname norway_nuts3_map_bxxxx_insert_oslo_dt
-"norway_nuts3_position_geolabels_b2017_insert_oslo_dt"
+#' @rdname nor_nuts3_map_bxxxx_insert_oslo_dt
+"nor_nuts3_position_geolabels_b2017_insert_oslo_dt"
 
 # ***************************** #
 # map split ----
@@ -226,7 +226,7 @@
 #' library(ggplot2)
 #' q <- ggplot(mapping = aes(x = long, y = lat))
 #' q <- q + geom_polygon(
-#'   data = splmaps::norway_nuts3_map_b2020_split_dt,
+#'   data = splmaps::nor_nuts3_map_b2020_split_dt,
 #'   mapping = aes(group = group),
 #'   color = "black",
 #'   fill = "white",
@@ -235,7 +235,7 @@
 #' q <- q + theme_void()
 #' q <- q + coord_quickmap()
 #' q
-#' @name norway_nuts3_map_bxxxx_split_dt
-"norway_nuts3_map_b2020_split_dt"
+#' @name nor_nuts3_map_bxxxx_split_dt
+"nor_nuts3_map_b2020_split_dt"
 
 

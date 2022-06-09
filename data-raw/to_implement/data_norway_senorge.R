@@ -26,7 +26,7 @@
 #' #' @source \url{http://thredds.met.no/thredds/catalog/senorge/seNorge_2018/Archive/catalog.html}
 #' "senorge_b2019"
 #'
-#' gen_senorge <- function(norway_locations_current, norway_map_municips) {
+#' gen_senorge <- function(nor_locations_current, nor_map_municips) {
 #'   id <- NULL
 #'   location_code <- NULL
 #'   long <- NULL
@@ -67,15 +67,15 @@
 #'   batches <- unlist(batches)
 #'   gps[, batch := batches]
 #'
-#'   for (i in norway_locations_current$municip_code) {
+#'   for (i in nor_locations_current$municip_code) {
 #'     message(i)
-#'     # res <- SDMTools::pnt.in.poly(gps[, c("long", "lat")], norway_map_municips[location_code == i, c("long", "lat")])
+#'     # res <- SDMTools::pnt.in.poly(gps[, c("long", "lat")], nor_map_municips[location_code == i, c("long", "lat")])
 #'     for(j in unique(batches)){
 #'       res <- sp::point.in.polygon(
 #'         point.x = gps[batch==j]$long,
 #'         point.y = gps[batch==j]$lat,
-#'         pol.x = norway_map_municips[location_code == i]$long,
-#'         pol.y = norway_map_municips[location_code == i]$lat,
+#'         pol.x = nor_map_municips[location_code == i]$long,
+#'         pol.y = nor_map_municips[location_code == i]$lat,
 #'       )
 #'       indexes <- which(res > 0)
 #'       gps[batch==j][indexes, location_code := i]

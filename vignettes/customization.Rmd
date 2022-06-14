@@ -189,11 +189,12 @@ It is convenient to use `spldata` package to enrich Norway and Oslo maps with ex
 
 ```{r fig.height=6, fig.width=6}
 # enrich with population and location name
-dpop_2020 <- fhidata::nor_population_b2020[
+dpop_2020 <- fhidata::norway_population_b2020[
   year == '2020',
   .(pop_total = sum(pop)),
   keyby = location_code
 ]
+
 
 # join, create label
 labels <- copy(splmaps::nor_nuts3_position_geolabels_b2020_insert_oslo_dt)
@@ -203,7 +204,7 @@ labels[
   pop_total := pop_total
 ]
 labels[
-  fhidata::nor_locations_long_b2020, 
+  spldata::norway_locations_names_b2020, 
   on = "location_code",
   location_name := location_name
 ]
@@ -247,7 +248,7 @@ q
 
 ```{r fig.height=6, fig.width=6}
 # enrich with population and location name
-dpop_2020 <- fhidata::nor_population_b2020[
+dpop_2020 <- fhidata::norway_population_b2020[
   year == '2020',
   .(pop_total = sum(pop)),
   keyby = location_code
@@ -261,7 +262,7 @@ labels[
   pop_total := pop_total
 ]
 labels[
-  fhidata::nor_locations_long_b2020, 
+  spldata::norway_locations_names_b2020, 
   on = "location_code",
   location_name := location_name
 ]

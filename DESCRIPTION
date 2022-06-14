@@ -24,7 +24,8 @@ Suggests: testthat,
     ggrepel,
     leaflet,
     sf,
-    fhidata
+    fhidata, 
+    spldata
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
 Encoding: UTF-8
